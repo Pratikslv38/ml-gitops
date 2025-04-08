@@ -4,6 +4,8 @@ image:
   repository: pratikslv38/fastapi-ml
   tag: latest
   pullPolicy: IfNotPresent
+  pullSecrets:
+    - name: dockerhub-creds
 
 service:
   type: LoadBalancer
