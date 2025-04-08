@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: your-docker-image-repo
+  repository: pratikslv38/fastapi-ml
   tag: latest
   pullPolicy: IfNotPresent
 
