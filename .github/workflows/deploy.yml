@@ -39,7 +39,7 @@ jobs:
           echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
 
       - name: Update values.yaml with new image tag
-        run: sed -i "s/^\(\s*tag:\s*\).*/\1\"$IMAGE_TAG\"/" charts/fastapi-ml/values.yaml
+        run: sed -i "s/^\(\s*tag:\s*\).*/\1\"$IMAGE_TAG\"/" mlgitops/charts/fastapi-ml/values.yaml
         env:
           IMAGE_TAG: gh-3
       - name: Commit and push updated values.yaml
