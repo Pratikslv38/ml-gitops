@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: churndemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: churndemo
+  template:
+    metadata:
+      labels:
+        app: churndemo
+    spec:
+      containers:
+      - name: churndemo
+        image: pratikslv38/churn-model-api
+        ports:
+        - containerPort: 8000
+
