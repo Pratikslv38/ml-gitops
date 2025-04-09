@@ -1,0 +1,10 @@
+service:
+  type: LoadBalancer
+
+adminUser: admin
+adminPassword: admin
+
+grafana.ini:
+  server:
+    root_url: http://localhost:3000
+

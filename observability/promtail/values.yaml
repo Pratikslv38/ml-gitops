@@ -1,0 +1,17 @@
+# values.yaml for promtail
+server:
+  logLevel: info
+  port: 3101
+
+clients:
+  - url: http://loki-stack:3100/loki/api/v1/push
+
+scrape_configs:
+  - job_name: kubernetes-pods
+    kubernetes_sd_configs:
+      - role: pod
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        action: keep
+        regex: fastapi-ml
+

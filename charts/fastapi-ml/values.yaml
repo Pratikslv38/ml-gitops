@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: pratikslv38/fastapi-ml
-  tag: latest
+  tag: v1.0.1
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: dockerhub-creds
@@ -25,3 +25,7 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 3
   targetCPUUtilizationPercentage: 70
+
+ingress:
+  enabled: true
+  host: yourdomain.example.com
