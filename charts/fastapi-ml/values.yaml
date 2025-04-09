@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: pratikslv38/fastapi-ml
-  tag: 1.0.1
+  tag: latest
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: dockerhub-creds
