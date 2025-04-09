@@ -35,8 +35,8 @@ jobs:
 
       - name: Update values.yaml with new image tag
         run: |
-          sed -i "s/tag: .*/tag: \"$IMAGE_TAG\"/" ml-gitops/charts/fastapi-ml/values.yaml
-        shell: bash
+          cd ml-gitops/charts/fastapi-ml
+          sed -i "s/tag: .*/tag: \"$IMAGE_TAG\"/" values.yaml
         env:
           IMAGE_TAG: gh-3
       - name: Commit and push updated values.yaml
